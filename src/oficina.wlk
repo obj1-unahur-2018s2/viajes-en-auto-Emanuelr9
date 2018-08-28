@@ -5,7 +5,7 @@ object oficina {
 	var choferes1
 	var choferes2
 	var cambiachofer1
-	var chofercambio
+	
 
 	method asignarChoferes(chofer1, chofer2) {
 		choferes1 = chofer1
@@ -17,9 +17,10 @@ object oficina {
 	}
 
 	method intercambiarChoferes() {
-		chofercambio = choferes1
+		
+		const chofercambio = choferes1
 		choferes1 = choferes2
-		chofercambio = choferes2
+		choferes2 = chofercambio 
 	}
 	
 	method choferElegidoParaViaje(cliente, kms){
