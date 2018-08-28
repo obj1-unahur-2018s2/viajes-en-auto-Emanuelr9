@@ -30,24 +30,21 @@ object mariela {
 
 object juana {
 	method precioViaje(cliente, kms) { 
-		if(kms<8){return 100}
-		else{
-			
-		}
-		return 200
+		return if(kms<8) {100} else{200}
+		
 	}
 }
 
 
 object lucia {
-	var _chofer=null
+	var choferQueReemplaza        //referencia
 	method reemplazo(chofer){
-		_chofer=chofer
+		choferQueReemplaza=chofer
 		}
 	
 	
-	method precioViaje(cliente, kms){
-		return _chofer.precioViaje (cliente, kms)
+	method precioViaje(cliente, kms){    //Polimorficos
+		return choferQueReemplaza.precioViaje (cliente, kms)
 		
 		}
 	}
